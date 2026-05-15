@@ -1,0 +1,10 @@
+# Build artifacts — never commit installers to git.
+*.dmg
+*.exe
+*.zip
+*.blockmap
+*.pkg
+*.AppImage
+*.deb
+node_modules/
+.DS_Store
