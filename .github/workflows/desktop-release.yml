@@ -90,9 +90,6 @@ jobs:
   windows:
     name: Build Windows (signed)
     runs-on: windows-latest
-    defaults:
-      run:
-        working-directory: desktop
     steps:
       - uses: actions/checkout@v4
 
