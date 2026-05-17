@@ -27,7 +27,7 @@ jobs:
         env:
           CSC_LINK: ${{ secrets.APPLE_CERT_P12_BASE64 }}
           CSC_KEY_PASSWORD: ${{ secrets.APPLE_CERT_PASSWORD }}
-          CSC_NAME: ${{ secrets.APPLE_SIGN_IDENTITY }}
+#         CSC_NAME: ${{ secrets.APPLE_SIGN_IDENTITY }}
           APPLE_ID: ${{ secrets.APPLE_ID }}
           APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
