@@ -11,9 +11,6 @@ jobs:
     name: Build macOS (signed + notarized)
     runs-on: macos-latest
     timeout-minutes: 45
-    defaults:
-      run:
-        working-directory: desktop
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -42,9 +39,9 @@ jobs:
         with:
           name: mac-build
           path: |
-            desktop/release/*.dmg
-            desktop/release/*.zip
-            desktop/release/*.blockmap
+            release/*.dmg
+            release/*.zip
+            release/*.blockmap
           if-no-files-found: ignore
 
   release:
