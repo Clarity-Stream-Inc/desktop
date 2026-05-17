@@ -1,0 +1,24 @@
+{
+  "name": "clarity-stream-desktop",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Clarity Stream IoT dashboard — native desktop wrapper",
+  "main": "main.cjs",
+  "author": "Clarity Stream",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "start:local": "CLARITY_TARGET_URL=http://localhost:8080 electron .",
+    "pack:mac": "electron-packager . \"Clarity Stream\" --platform=darwin --arch=universal --icon=assets/icon.icns --out=release --overwrite --osx-sign.identity=\"$APPLE_SIGN_IDENTITY\" --osx-notarize.appleId=\"$APPLE_ID\" --osx-notarize.appleIdPassword=\"$APPLE_APP_SPECIFIC_PASSWORD\" --osx-notarize.teamId=\"$APPLE_TEAM_ID\" --extend-info=Info.plist.json",
+    "pack:win": "electron-packager . \"Clarity Stream\" --platform=win32 --arch=x64 --icon=assets/icon.ico --out=release --overwrite --win32metadata.CompanyName=\"Clarity Stream\" --win32metadata.ProductName=\"Clarity Stream\"",
+    "pack:linux": "electron-packager . \"Clarity Stream\" --platform=linux --arch=x64 --icon=assets/icon.png --out=release --overwrite"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "@electron/packager": "^18.3.6",
+    "@electron/notarize": "^2.5.0"
+  }
+}
